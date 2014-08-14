@@ -1,0 +1,72 @@
+{
+	"edition": "Fem",
+	"requires":
+		[
+			"Essentials"
+		],
+	"cmake":
+	{
+		"cache":
+			[
+				{ "name": "Module_vtkIOXML",
+				  "type": "BOOL",
+				  "value": "ON"
+				}
+			]
+	},
+	"modules":
+	[
+		{
+			"name": "vtkIOXML",
+			"path": "VTK/IO/XML",
+			"include":
+			[
+				{ "path": "vtkXMLOffsetsManager.h" },
+				{ "class": "vtkXMLCompositeDataWriter" },
+				{ "class": "vtkXMLImageDataWriter" },
+				{ "class": "vtkXMLMultiBlockDataWriter" },
+				{ "class": "vtkXMLPolyDataWriter" },
+				{ "class": "vtkXMLRectilinearGridWriter" },
+				{ "class": "vtkXMLStructuredDataWriter" },
+				{ "class": "vtkXMLStructuredGridWriter" },
+				{ "class": "vtkXMLUnstructuredDataWriter" },
+				{ "class": "vtkXMLUnstructuredGridWriter" },
+				{ "class": "vtkXMLWriter" }
+			],
+			"replace":
+			[
+				{ "path": "VTK/IO/XML/module.cmake" },
+				{ "path": "VTK/IO/XML/CMakeLists.txt" }
+			],
+		  "cswrap": true,
+		  "pythonwrap": true
+		}
+	],
+	"proxies":
+	[
+		{
+			"path":"ParaViewCore/ServerManager/SMApplication/Resources/writers.xml",
+			"proxies":[
+				"XMLDataSetWriter",
+				"XMLMultiBlockDataWriter",
+				"XMLPImageDataWriter",
+				"XMLPPolyDataWriter",
+				"XMLPRectilinearGridWriter",
+				"XMLPStructuredGridWriter",
+				"XMLPUnstructuredGridWriter"
+			]
+		},
+		{ "path":"ParaViewCore/ServerManager/SMApplication/Resources/internal_writers.xml",
+			"proxies":[
+				"XMLDataSetWriterCore",
+				"XMLPDataSetWriterCore",
+				"XMLPImageDataWriterCore",
+				"XMLPMultiBlockDataWriterCore",
+				"XMLPPolyDataWriterCore",
+				"XMLPRectilinearGridWriterCore",
+				"XMLPStructuredGridWriterCore",
+				"XMLPUnstructuredGridWriterCore"
+			]
+		}
+	]
+}
