@@ -41,6 +41,10 @@
       { "name":"Module_vtkIOXML",
         "type":"BOOL",
         "value":"ON"
+      },
+      { "name":"Module_vtkIONetCDF",
+        "type":"BOOL",
+        "value":"ON"
       }
     ]
   },
@@ -201,6 +205,15 @@
     },
     { "name":"vtkjsoncpp",
       "path":"VTK/ThirdParty/jsoncpp"
+    },
+    { "name":"vtkThirdPartyhdf5",
+      "path":"VTK/ThirdParty/hdf5"
+    },
+    { "name":"vtkThirdPartynetcdf",
+      "path":"VTK/ThirdParty/netcdf"
+    },
+    { "name":"vtkIONetCDF",
+      "path":"VTK/IO/NetCDF"
     },
     { "name":"vtkPVVTKExtensionsCore",
       "path":"ParaViewCore/VTKExtensions/Core",
