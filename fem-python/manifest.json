@@ -1,0 +1,8 @@
+{
+	"edition": "Fem-Python",
+	"requires":
+		[
+			"Fem",
+			"Enable-Python"
+		]
+}
