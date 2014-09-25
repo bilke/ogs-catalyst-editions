@@ -11,3 +11,13 @@ cd ~/catalyst/build-fem-python
 ../fem-python/cmake.sh ../fem-python
 make
 ```
+
+## Create repository
+
+```bash
+cd ~/catalyst/fem
+find . -name .git -exec rm {} \;
+git init
+git add .
+git commit
+```
